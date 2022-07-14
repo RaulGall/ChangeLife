@@ -1,22 +1,15 @@
 from flask import Flask, render_template, redirect, url_for
-from forms import PersonalityForm
+from forms import CandidatePersonalityForm
 from BL.BusinessLayer import BusinessLayer
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'your secret key'
 
-
-personality_answers_list = [{
-    'name': 'Test name',
-    'email': 'test@email.com',
-    'question1': 34
-    }]
-
 businesslayer = BusinessLayer()
 
 @app.route('/', methods=('GET', 'POST'))
 def index():
-    form = PersonalityForm()
+    form = CandidatePersonalityForm()
     if form.validate_on_submit():
 
         businesslayer.addPersonalityTest(form)
@@ -31,7 +24,7 @@ def roles():
 
 @app.route('/addroles/')
 def add_roles():
-    return render_template('addroles.html', personality_list=personality_answers_list)
+    return render_template('addroles.html', personality_list=businesslayer.getPersonalityTest())
 
 @app.route('/test')
 def test_connection():

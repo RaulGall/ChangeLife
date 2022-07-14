@@ -31,13 +31,77 @@
         {% endif %}
 
         <p>
-            Do you like to lead teams?:<br>
-            Disagree {{ form.friends(min=0, max=100, oninput="outputUpdate(value)", size=300) }} Totally agree
-
+            <h4>{{ form.friends.label }}:</h4>
+            Disagree {{ form.friends(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
         </p>
-
-
-
+        <p>
+            <h4>{{ form.random_topics.label }}:</h4>
+            Disagree {{ form.random_topics(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.cry.label }}:</h4>
+            Disagree {{ form.cry(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.backup_plan.label }}:</h4>
+            Disagree {{ form.backup_plan(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.stay_calm.label }}:</h4>
+            Disagree {{ form.stay_calm(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.social_events.label }}:</h4>
+            Disagree {{ form.social_events(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.start_projects.label }}:</h4>
+            Disagree {{ form.start_projects(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.sentimental.label }}:</h4>
+            Disagree {{ form.sentimental(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.organization.label }}:</h4>
+            Disagree {{ form.organization(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.self_steem.label }}:</h4>
+            Disagree {{ form.self_steem(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.conversation.label }}:</h4>
+            Disagree {{ form.conversation(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.creative.label }}:</h4>
+            Disagree {{ form.creative(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.head_heart.label }}:</h4>
+            Disagree {{ form.head_heart(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.planning.label }}:</h4>
+            Disagree {{ form.planning(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.impression.label }}:</h4>
+            Disagree {{ form.impression(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.group_activities.label }}:</h4>
+            Disagree {{ form.group_activities(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.interpretation.label }}:</h4>
+            Disagree {{ form.interpretation(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
+        <p>
+            <h4>{{ form.accomplish.label }}:</h4>
+            Disagree {{ form.accomplish(min=0, max=100, oninput="outputUpdate(value)") }} Totally agree
+        </p>
         <p>
             <input type="submit" value="Add">
         </p>

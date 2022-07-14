@@ -4,8 +4,8 @@
     <h1>{% block title %} Roles {% endblock %}</h1>
     <hr>
     {% for personality in personality_list %}
-        {% for personality_value in personality.values() %}
-            <h2> {{ personality_value}} </h2>
+        {% for key, value in personality.items() %}
+            <h5> {{ key }} {{ value }}</h5>
         <!--<h4> {{ personality['email'] }} </h4>
         <p> {{ personality['friends'] }} </p>
         -->

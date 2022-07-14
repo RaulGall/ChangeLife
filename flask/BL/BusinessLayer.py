@@ -19,3 +19,6 @@ class BusinessLayer:
 
     def getPersonalityTest(self):
         return self.__personality_test
+
+    def getQuestionsFromForm(self, test:FlaskForm):
+        return
