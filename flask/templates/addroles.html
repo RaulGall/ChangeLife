@@ -1,0 +1,37 @@
+{% include 'base_role.html' %}
+
+{% block content %}
+    <h1>{% block title %} Roles {% endblock %}</h1>
+    <p>
+    Here we can create new roles to be matched by the candidates. The idea is to feed the personality
+        from each role at the following test:
+    </p>
+
+
+
+
+    <hr>
+<form method="POST" action="/addroles/">
+    {{ form.csrf_token }}
+        <p>
+            {{ form.rolename.label }}
+            {{ form.rolename(size=30) }}
+        </p>
+
+        {% if form.rolename.errors %}
+            <ul class="errors">
+                {% for error in form.name.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    {% include 'questions.html' %}
+
+        <p>
+            <input type="submit" value="Add">
+        </p>
+    </form>
+
+{% endblock %}
+

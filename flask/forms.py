@@ -27,6 +27,9 @@ class PersonalityForm(FlaskForm):
 
 
 class CandidatePersonalityForm(PersonalityForm):
-    name = StringField('Name *', validators=[InputRequired(),
+    name = StringField('Name', validators=[InputRequired(),
                                              Length(min=10, max=100)])
-    email = EmailField('EMail *', validators=[InputRequired()])
+    email = EmailField('EMail', validators=[InputRequired()])
+
+class RoleForm(PersonalityForm):
+    rolename = StringField('Role Name', validators=[Length(min=5, max=100)])
